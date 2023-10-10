@@ -9,6 +9,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {ms} from '../../../common/res/Scale';
 import {Colors} from '../../../common/res';
+import style from './style';
 const reportData = [
   {
     name: 'Arun',
@@ -70,8 +71,8 @@ function renderReport({item, index}) {
         padding: 15,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderBottomWidth: 1.5,
-        borderBottomColor: '#fff',
+        borderBottomWidth: 0.5,
+        borderBottomColor: '#ccc',
         alignItems: 'center',
       }}>
       <View style={{flexDirection: 'row'}}>
@@ -81,10 +82,19 @@ function renderReport({item, index}) {
           style={{height: ms(35), width: ms(35), alignSelf: 'center'}}
         />
         <View style={{marginHorizontal: 15}}>
-          <Text style={{fontSize: 18, color: '#000'}}>{item.name}</Text>
-          <Text style={{fontSize: 14, color: '#000'}}>
+          <Text style={{fontSize: 17, color: '#000'}}>{item.name}</Text>
+          <View style={{flexDirection:'row'}}>
+          <FontAwesome
+          name="phone"
+          size={18}
+          color={ '#707070'}
+          style={{paddingRight:5}}
+        />
+          <Text style={{fontSize: 14, color: '#707070'}}>
             {item.mobile_number}
           </Text>
+          </View>
+          
         </View>
       </View>
       <View
@@ -118,11 +128,15 @@ const Customer = () => {
         showMenuIcon={true}
         onMenuPress={() => navigation.openDrawer()}
       />
+      <View style={{flex:1}}>
+        <View style={{alignItems:'center',paddingVertical:10}}>
+          <Text style={{color:Colors.black,fontSize:16}}>Total Empty Due : 230</Text>
+        </View>
       <View
         style={[
           {
             backgroundColor: '#fff',
-            height: 40,
+            height: 45,
             marginHorizontal: 20,
             marginBottom: 20,
             borderRadius: 26,
@@ -167,9 +181,8 @@ const Customer = () => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-          borderBottomColor: '#0ff',
-          borderBottomWidth: 1,
-          padding: 10,
+          paddingVertical: 5,
+          paddingHorizontal:10
         }}>
         <Text
           style={{
@@ -188,13 +201,16 @@ const Customer = () => {
 
             fontSize: 17,
           }}>
-          Damages Count
+          Empty Count
         </Text>
       </View>
+      <View style={style.listBox}>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={reportData}
         renderItem={renderReport}></FlatList>
+      </View>
+      </View>
       {/* </ImageBackground> */}
     </MainFrameView>
   );

@@ -13,6 +13,7 @@ function Routes() {
         <Stack.Screen name="Login" component={Screens.Login} />
         <Stack.Screen name="Register" component={Screens.Register} />
         <Stack.Screen name="Home" component={DrawerMenu}/>
+        <Stack.Screen name="ProfitReport" component={Screens.ProfitReports}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -53,7 +53,7 @@ function BottomTabBar() {
       <Tab.Screen
         options={{headerShown: false}}
         name="Reports"
-        component={Screens.Reports}
+        component={Screens.ProfitReports}
       />
       {/* Add your tab screens here */}
     </Tab.Navigator>

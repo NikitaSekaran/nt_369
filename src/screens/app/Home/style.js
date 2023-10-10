@@ -12,15 +12,16 @@ export default StyleSheet.create({
     marginBottom: 10,
   },
   listBox1: {
-    width: '90%',
-    height: vs(50),
+    width: '93%',
+    height: vs(65),
     borderWidth: 2,
     borderColor: '#fff',
-    alignItems: 'center',
+    // alignItems: 'center',
     borderRadius: vs(10),
     backgroundColor: 'white',
-    flexDirection: 'row',
-    justifyContent: 'space-around', 
+    paddingHorizontal:20,
+    // flexDirection: 'row',
+    // justifyContent: 'space-around', 
     ...CommonStyles.shadow,
   },
   listBox: {
@@ -64,6 +65,6 @@ export default StyleSheet.create({
     marginHorizontal:15,
     borderRadius:15,
     justifyContent:'center',
-    paddingBottom:20
+    marginVertical:10
   }
 });

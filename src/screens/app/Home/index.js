@@ -51,20 +51,39 @@ const Dashboard = () => {
             coverRadius={0}
             coverFill={'#FFF'}
           /> */}
+          <View style={{flexDirection:'row',width:'100%'}}>
           <Text
             style={{
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: '600',
               color: '#707070',
-              textAlign: 'center',
               margin: 5,
+              width:'75%'
             }}>
             {label}
           </Text>
-          <Text style={[styles.labelText, {fontSize: 18}]}>
+          <Text style={[styles.labelText, {fontSize: 18,paddingTop:7,width:'15%'}]}>
             {rs}
             {val}
           </Text>
+          </View>
+          
+          <View style={{flexDirection:'row',width:'100%'}}>
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: '600',
+              color: '#707070',
+              margin: 5,
+              width:'75%'
+            }}>
+            {"Today Cash"}
+          </Text>
+          <Text style={[styles.labelText, {fontSize: 18,paddingTop:7,width:'15%'}]}>
+            {rs}
+            {"2500"}
+          </Text>
+          </View>
         </View>
       </View>
     );
@@ -132,7 +151,7 @@ const Dashboard = () => {
           numColumns={2}
           keyExtractor={(item, index) => index.toString()}
         />
-        {renderTotalExpense('Today Cash', '2500')}
+        {/* {renderTotalExpense('Today Cash', '2500')} */}
        
       </ScrollView>
       {/* </ImageBackground> */}
