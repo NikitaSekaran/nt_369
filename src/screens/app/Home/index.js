@@ -14,17 +14,17 @@ const Dashboard = () => {
   const series = [123, 321, 223];
   const sliceColor = ['#85E0A3', '#FFD966', '#80CAFF'];
   const list1 = [
-    {id: 1, label: 'Empty 20Ltr Can', value: 50},
-    {id: 2, label: 'Filled 20Ltr Can', value: 100},
-    {id: 3, label: 'Total Purchase', value: 1550},
-    {id: 4, label: 'Total Sales', value: 500},
+    {id: 1, label: 'Empty 20Ltr Can', value: 93},
+    {id: 2, label: 'Filled 20Ltr Can', value: 72},
+    {id: 3, label: 'Total Purchase', value: 2400},
+    {id: 4, label: 'Total Sales', value: 4875},
     // {id: 5, label: 'Total Expenses', value: 500},
     // {id: 6, label: 'Today Cash', value: 500},
   ];
   const list2 = [
-    {id: 6, label: 'Vendor Balance', value: 154},
-    {id: 6, label: 'Customer Balance', value: 524},
-    {id: 6, label: 'Customer Advance', value: 514},
+    {id: 6, label: 'Vendor Balance', value: 300},
+    {id: 6, label: 'Customer Balance', value: 750},
+    {id: 6, label: 'Customer Advance', value: 150},
     {id: 6, label: 'Customer Deposit', value: 5400},
   ];
   const renderItem = ({item}) => {
@@ -110,7 +110,7 @@ const Dashboard = () => {
           numColumns={2}
           keyExtractor={(item, index) => index.toString()}
         />
-        {renderTotalExpense('Total Expenses', '240')}
+        {renderTotalExpense('Total Expenses', '600')}
         <View style={styles.chartBox}>
           <View style={{justifyContent: 'center'}}>
             {/* <PieChart

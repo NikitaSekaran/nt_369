@@ -12,55 +12,51 @@ import {Colors} from '../../../common/res';
 import style from './style';
 const reportData = [
   {
-    name: 'Arun',
-    mobile_number: '123-456-7890',
+    name: 'Ganesh Store',
+    mobile_number: '9962165149',
     damages_count: 2,
   },
   {
-    name: 'Ramesh',
-    mobile_number: '987-654-3210',
+    name: 'Daniyal',
+    mobile_number: '8124963797',
     damages_count: 0,
   },
   {
-    name: 'Prabhu',
-    mobile_number: '555-555-5555',
+    name: 'Arun',
+    mobile_number: '8122071506',
     damages_count: 5,
   },
   {
-    name: 'Kumar',
-    mobile_number: '111-222-3333',
+    name: 'Prabhu',
+    mobile_number: '8072754189',
     damages_count: 1,
   },
   {
-    name: 'Selva',
-    mobile_number: '888-777-6666',
+    name: 'Prem',
+    mobile_number: '637996790',
     damages_count: 3,
   },
   {
-    name: 'Rajesh',
-    mobile_number: '333-444-5555',
+    name: 'Jefin',
+    mobile_number: '9943878759',
     damages_count: 7,
   },
   {
-    name: 'Ravi',
-    mobile_number: '555-123-4567',
+    name: 'Thiru',
+    mobile_number: '9551755290',
     damages_count: 4,
   },
   {
-    name: 'Aswin',
-    mobile_number: '999-888-7777',
+    name: 'Chandru',
+    mobile_number: '9943496829',
     damages_count: 0,
   },
   {
-    name: 'Jefin',
-    mobile_number: '777-888-9999',
+    name: 'Ravi',
+    mobile_number: '9843979674',
     damages_count: 2,
   },
-  {
-    name: 'Gokul',
-    mobile_number: '444-555-6666',
-    damages_count: 6,
-  },
+  
 ];
 
 function renderReport({item, index}) {

@@ -5,9 +5,9 @@ import { Colors } from '../../res';
 function CustomPieChart() {
   const rs = '\u20B9';
   const data = [
-    {key: 'red', value: 160, color: Colors?.lightOrange, label: 'Sales'},
-    {key: 'green', value: 240, color: Colors.lightGreen, label: 'Purchase'},
-    {key: 'blue', value: 150, color: Colors.lightBlue, label: 'Expenses'},
+    {key: 'red', value: 4875, color: Colors?.lightOrange, label: 'Sales'},
+    {key: 'green', value: 2400, color: Colors.lightGreen, label: 'Purchase'},
+    {key: 'blue', value: 600, color: Colors.lightBlue, label: 'Expenses'},
   ];
 
   const total = data.reduce((sum, item) => sum + item.value, 0);
@@ -18,26 +18,26 @@ function CustomPieChart() {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        marginRight: 50,
-        marginTop: -40,
-        marginBottom:20
+         marginRight: 20,
+        marginTop: -30,
+        // marginBottom:20
       }}>
-      <Svg width={250} height={250}>
+      <Svg width={280} height={280}>
         {data.map((item, index) => {
           const angle = (item.value / total) * 360;
           const endAngle = startAngle + angle;
 
           const path = `
-            M150,150
-            L${150 + Math.cos(startAngle * (Math.PI / 180)) * 100},${
-            150 + Math.sin(startAngle * (Math.PI / 180)) * 100
+          M150,150
+          L${150 + Math.cos(startAngle * (Math.PI / 180)) * 110},${
+          150 + Math.sin(startAngle * (Math.PI / 180)) * 110
           }
-            A100,100 0 ${angle > 180 ? 1 : 0},1
-            ${150 + Math.cos(endAngle * (Math.PI / 180)) * 100},${
-            150 + Math.sin(endAngle * (Math.PI / 180)) * 100
+          A110,110 0 ${angle > 180 ? 1 : 0},1
+          ${150 + Math.cos(endAngle * (Math.PI / 180)) * 110},${
+          150 + Math.sin(endAngle * (Math.PI / 180)) * 110
           }
-            Z
-          `;
+          L150,150
+        `;
 
           // Calculate the position of the label
           const labelAngle = startAngle + angle / 2;
@@ -74,7 +74,7 @@ function CustomPieChart() {
           Profit
         </SvgText>
         <SvgText x="150" y="170" fill="#000" fontSize="16" textAnchor="middle">
-          {`${rs} 230`}
+          {`${rs} 1875`}
         </SvgText>
       </Svg>
     </View>

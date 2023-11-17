@@ -1,8 +1,10 @@
 import React from "react";
 import MainFrameView from "../../../common/components/MainFrameView";
 import AppHeader from "../../../common/components/AppHeader";
-import { Images, Strings } from "../../../common/res";
+import { Colors, Images, Strings } from "../../../common/res";
 import { useNavigation } from "@react-navigation/native";
+import FontAwesome5Icons from "react-native-vector-icons/FontAwesome5";
+
 import style from "./style";
 import {
   ImageBackground,
@@ -47,6 +49,7 @@ const Reports = () => {
           style={style.listView}
         >
           <Text>Click</Text>
+          <FontAwesome5Icons name="chevron-right" size={24} color={Colors.primary} />
         </TouchableOpacity>
       </View>
       {/* </ImageBackground> */}
