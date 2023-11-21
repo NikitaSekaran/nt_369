@@ -12,6 +12,10 @@ it("Renders Message", async () => {
 
   await waitFor(() => expect(queryByTestId("printed-message")).toBeTruthy());
 
-  expect(getByTestId("printed-message").props.children).toBe("Hello Tester");
+  const printedMessage = getByTestId("printed-message");
+
+  console.log("Rendered Message:", printedMessage.props.children); // Add this line for debugging
+
+  expect(printedMessage.props.children).toBe("Hello Tester");
   expect(toJSON()).toMatchSnapshot();
 });
