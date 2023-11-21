@@ -8,6 +8,9 @@ exports[`Renders Message 1`] = `
     }
   }
 >
+  <Text>
+    Hinnn
+  </Text>
   <View
     accessibilityRole="button"
     accessibilityState={
