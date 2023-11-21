@@ -26,7 +26,7 @@ const App = () => {
         barStyle={isDarkMode ? "light-content" : "dark-content"}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-
+<Text>Hi</Text>
       <Button
         title="Say Hello"
         onPress={() => {
